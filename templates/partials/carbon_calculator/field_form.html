@@ -1,0 +1,615 @@
+{% macro field_form() %}
+    <div class="row" style="margin-top: 20px">
+        <div class="col-sm-6">
+            <label>
+                Field name
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder="Field name"
+                       required
+                       data-error="Please enter your email">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Farming system applied
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon fa fa-user"></i>
+                <select class="custom-select" id="inputGroupSelect01"
+                        style="height: 50px; margin-bottom: 30px;">
+                    <option selected>Choose option</option>
+                    <option value="1">Agroforestry with arable crops (silvoarable systems)</option>
+                    <option value="2">Agroforestry with animal husbandry (silvopastoral systems)</option>
+                    <option value="3">Agroforestry with arable crops and animal husbandry (agrosilvopastoral systems)
+                    </option>
+                    <option value="4">Integrated crop & livestock farming without agroforestry</option>
+                    <option value="5">Pure crop farming</option>
+                </select>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Retrospective data
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon fa fa-user"></i>
+                <select class="custom-select" id="inputGroupSelect01"
+                        style="height: 50px; margin-bottom: 30px;">
+                    <option selected>Choose option</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                </select>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Retrospective until
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon fa fa-user"></i>
+                <select class="custom-select" id="inputGroupSelect01"
+                        style="height: 50px; margin-bottom: 30px;">
+                    <option selected>Choose option</option>
+                    <option value="1">Don't know</option>
+                    <option value="1">2010-2020</option>
+                    <option value="2">2000-2020</option>
+                    <option value="2">1950-2020</option>
+                    <option value="2">1900-2020</option>
+                </select>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Past use
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon fa fa-user"></i>
+                <select class="custom-select" id="inputGroupSelect01"
+                        style="height: 50px; margin-bottom: 30px;">
+                    <option selected>Choose option</option>
+                    <option value="1">Agriculture</option>
+                    <option value="2">Grassland</option>
+                    <option value="3">ForestLand</option>
+                    <option value="4">Use has varied over the years</option>
+                    <option value="5">Different</option>
+                </select>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                If land use has varied over the years, what were the last two systems of farming of the field and for
+                how many years before the switch to regenerative was the last system of farming used?
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon fa fa-user"></i>
+                <select class="custom-select" id="inputGroupSelect01"
+                        style="height: 50px; margin-bottom: 30px;">
+                    <option selected>Choose option</option>
+                    <option value="1">Agriculture</option>
+                    <option value="2">Grassland</option>
+                    <option value="3">ForestLand</option>
+                    <option value="4">Use has varied over the years</option>
+                    <option value="5">Different</option>
+                </select>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                In what year did the switch to regenerative practices take place?
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon fa fa-user"></i>
+                <select class="custom-select" id="inputGroupSelect01"
+                        style="height: 50px; margin-bottom: 30px;">
+                    <option selected>Choose option</option>
+                    <option value="1">Agriculture</option>
+                    <option value="2">Grassland</option>
+                    <option value="3">ForestLand</option>
+                    <option value="4">Use has varied over the years</option>
+                    <option value="5">Different</option>
+                </select>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Have you used this field continuously for crop farming since the conversion?
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon fa fa-user"></i>
+                <select class="custom-select" id="inputGroupSelect01"
+                        style="height: 50px; margin-bottom: 30px;">
+                    <option selected>Choose option</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No, varied</option>
+                </select>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                If use of the field has varied, please describe it.
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <textarea id="message" rows="4"
+                          placeholder="" required
+                          data-error="Please enter your message"></textarea>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                For which year would you like to provide information in the next step?
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon fa fa-user"></i>
+                <select class="custom-select" id="inputGroupSelect01"
+                        style="height: 50px; margin-bottom: 30px;">
+                    <option selected>Choose option</option>
+                    <option value="1">2020</option>
+                </select>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Which tillage method did you use this year?
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon fa fa-user"></i>
+                <select class="custom-select" id="inputGroupSelect01"
+                        style="height: 50px; margin-bottom: 30px;">
+                    <option selected>Choose option</option>
+                    <option value="1">Conventional tillage</option>
+                    <option value="1">No tillage</option>
+                    <option value="1">Conservation tillage</option>
+                </select>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                What did you do with your crop residues?
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon fa fa-user"></i>
+                <select class="custom-select" id="inputGroupSelect01"
+                        style="height: 50px; margin-bottom: 30px;">
+                    <option selected>Choose option</option>
+                    <option value="1">Harvest residues are removed / burned</option>
+                    <option value="1">Harvest residues are left in the field / plowed unde</option>
+                    <option value="1">Different</option>
+                </select>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                What type of organic fertilization did you apply?
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder="If you have not applied any organic fertilizer, please enter None."
+                       required
+                       data-error="Please enter your email">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Please indicate the amount of organic fertilization that you have applied in this field this year.
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder="If you have not applied any organic fertilizer, please enter None."
+                       required
+                       data-error="Please enter your email">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                What kind of mineral fertilizer did you apply?
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder="If you have not applied any mineral fertilizer, please enter None."
+                       required
+                       data-error="Please enter your email">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Please indicate the amount of mineral fertilization that you have applied in this field this year.
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder="If you have not applied any mineral fertilizer, please enter None."
+                       required
+                       data-error="Please enter your email">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <label>
+                If the field is irrigated, please provide the estimated amount this year.
+            </label>
+        </div>
+        <div class="col-sm-1">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder="Jan">
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder="Feb">
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder="Mar">
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder="Apr">
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder="May">
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder="Jun">
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder="Jul">
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder="Aug">
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder="Sep">
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder="Oct">
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder="Nov">
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder="Dec">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Summer crop in kilograms per hectare
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder=""
+                       required
+                       data-error="Please enter your email">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Winter crop in kilogram per hectare
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder=""
+                       required
+                       data-error="Please enter your email">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Annual legumes in kilogram per hectare
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder=""
+                       required
+                       data-error="Please enter your email">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Perennial legumes in kilogram per hectare
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder=""
+                       required
+                       data-error="Please enter your email">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Perennial crop in kilogram per hectare
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <i class="contact-icon"></i>
+                <input type="text" class="form-control" id="email"
+                       placeholder=""
+                       required
+                       data-error="Please enter your email">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Sugar beet / Fodder beet
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label class="tgl">
+                <input type="checkbox" />
+                <span class="tgl_body">
+                <span class="tgl_switch"></span>
+                <span class="tgl_track">
+                  <span class="tgl_bgd"></span>
+                  <span class="tgl_bgd tgl_bgd-negative"></span>
+                </span>
+              </span>
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Potatoes
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label class="tgl">
+                <input type="checkbox" />
+                <span class="tgl_body">
+                <span class="tgl_switch"></span>
+                <span class="tgl_track">
+                  <span class="tgl_bgd"></span>
+                  <span class="tgl_bgd tgl_bgd-negative"></span>
+                </span>
+              </span>
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Corn
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label class="tgl">
+                <input type="checkbox" />
+                <span class="tgl_body">
+                <span class="tgl_switch"></span>
+                <span class="tgl_track">
+                  <span class="tgl_bgd"></span>
+                  <span class="tgl_bgd tgl_bgd-negative"></span>
+                </span>
+              </span>
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Cereals / oil / fibre / sunflower / vegetables
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label class="tgl">
+                <input type="checkbox" />
+                <span class="tgl_body">
+                <span class="tgl_switch"></span>
+                <span class="tgl_track">
+                  <span class="tgl_bgd"></span>
+                  <span class="tgl_bgd tgl_bgd-negative"></span>
+                </span>
+              </span>
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Grain legumes
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label class="tgl">
+                <input type="checkbox" />
+                <span class="tgl_body">
+                <span class="tgl_switch"></span>
+                <span class="tgl_track">
+                  <span class="tgl_bgd"></span>
+                  <span class="tgl_bgd tgl_bgd-negative"></span>
+                </span>
+              </span>
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Winter catch crop
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label class="tgl">
+                <input type="checkbox" />
+                <span class="tgl_body">
+                <span class="tgl_switch"></span>
+                <span class="tgl_track">
+                  <span class="tgl_bgd"></span>
+                  <span class="tgl_bgd tgl_bgd-negative"></span>
+                </span>
+              </span>
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Stubble
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label class="tgl">
+                <input type="checkbox" />
+                <span class="tgl_body">
+                <span class="tgl_switch"></span>
+                <span class="tgl_track">
+                  <span class="tgl_bgd"></span>
+                  <span class="tgl_bgd tgl_bgd-negative"></span>
+                </span>
+              </span>
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Field grass / legumes
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label class="tgl">
+                <input type="checkbox" />
+                <span class="tgl_body">
+                <span class="tgl_switch"></span>
+                <span class="tgl_track">
+                  <span class="tgl_bgd"></span>
+                  <span class="tgl_bgd tgl_bgd-negative"></span>
+                </span>
+              </span>
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Fallow (from autumn)
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label class="tgl">
+                <input type="checkbox" />
+                <span class="tgl_body">
+                <span class="tgl_switch"></span>
+                <span class="tgl_track">
+                  <span class="tgl_bgd"></span>
+                  <span class="tgl_bgd tgl_bgd-negative"></span>
+                </span>
+              </span>
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label>
+                Other
+            </label>
+        </div>
+        <div class="col-sm-6">
+            <label class="tgl">
+                <input type="checkbox" />
+                <span class="tgl_body">
+                <span class="tgl_switch"></span>
+                <span class="tgl_track">
+                  <span class="tgl_bgd"></span>
+                  <span class="tgl_bgd tgl_bgd-negative"></span>
+                </span>
+              </span>
+            </label>
+        </div>
+    </div>
+{% endmacro %}
+

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Alias Colorlib &mdash; One Page Template for Personal/CV Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
+
+</head>
+<body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
+<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09"
+                aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="index.html">Terps Dispensary</a>
+<!--        <div style="padding: 10px  0 10px 100px; text-align: center;">-->
+<!--            <img src="images/Terps_Circle_CLR.png" alt="Image placeholder" width="60px" class="img-fluid">-->
+<!--        </div>-->
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/shop">Shop</a></li>
+                <li class="nav-item"><a class="nav-link" href="/genetics">Genetics</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="/careers">Careers</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="site-hero" style="background-image: url({{ url_for('static', filename='images/weed-coffeeshop-amsterdam-large.jpg') }});" id="section-home"
+         data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row intro-text align-items-center justify-content-center">
+            <div class="col-md-10 text-center">
+            </div>
+        </div>
+    </div>
+</section> <!-- section -->
+
+
+<section class="site-section" id="section-about">
+    <div class="container">
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-12 pr-lg-12">
+                <div style="padding: 20px; text-align: center;">
+                    <img src="{{ url_for('static', filename='images/Terps_Stack_CLR.png') }}" alt="Image placeholder" width="340px" class="img-fluid">
+                </div>
+                <div class="elemental-container" style="padding: 10px;">
+<!--                    <h2 style="margin-bottom: 27px;"><strong>Terps Dispensary</strong></h2>-->
+                    <div style="width: 55px; height: 3px; background: #479ea6; margin: auto;"></div>
+                </div>
+                <div style="padding: 20px; text-align: center;">
+                    <p>Nunc tincidunt tortor tempor risus interdum, quis ornare nisl luctus. Proin finibus nulla odio,
+                        et venenatis ante efficitur vel. Phasellus blandit mattis velit in mattis. Nam nisl diam,
+                        laoreet id odio in, finibus semper tortor. Nam consequat sapien est, quis ultricies libero
+                        mattis id. Fusce ullamcorper massa at mattis pulvinar. Nulla sit amet dolor quis tortor
+                        tincidunt maximus sed in nisl. Aenean congue ante massa, eget semper est interdum aliquam. Nam
+                        venenatis leo at ex mattis condimentum.
+                    </p>
+                </div>
+                <div class="elemental-container">
+                    <button type="button" class="btn btn-danger btn-standard">Show All Products</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="photos">
+    <img src="{{ url_for('static', filename='images/02-bulldog-coffeeshop-amsterdam-large.jpg') }}" alt="Serious cat">
+    <img src="{{ url_for('static', filename='images/joint-coffeeshop-amsterdam-large.jpg') }}" alt="Serious cat">
+    <img src="{{ url_for('static', filename='images/large_lounge_gallery_1_531587.jpg') }}" alt="Serious cat">
+    <img src="{{ url_for('static', filename='images/49_2048x.jpg') }}" alt="Serious cat">
+    <img src="{{ url_for('static', filename='images/christmas_coffee.jpg') }}" alt="Serious cat">
+    <img src="{{ url_for('static', filename='images/WANA-2-1-800x440.jpg') }}" alt="Serious cat">
+    <img src="{{ url_for('static', filename='images/IMG_1476.jpg') }}" alt="Serious cat">
+    <img src="{{ url_for('static', filename='images/Amsterdam-Houses.jpg') }}" alt="Serious cat">
+    <img src="{{ url_for('static', filename='images/Coffeeshops-Amsterdam-lead.jpg') }}" alt="Serious cat">
+    <img src="{{ url_for('static', filename='images/la-sala-al-primo-piano.jpg') }}" alt="Serious cat">
+    <img src="{{ url_for('static', filename='images/78oud41evya31.jpg') }}" alt="Serious cat">
+</section>
+<section class="site-section" id="section-testimonials">
+    <div class="container">
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
+                <img src="{{ url_for('static', filename='images/smoking-marijuana-snow-istock-2018.jpg') }}" alt="Image placeholder" class="img-fluid">
+            </div>
+            <div class="col-lg-5 pl-lg-5">
+                <div class="section-heading">
+                    <h2>Anna <strong>Morritz</strong></h2>
+                </div>
+                <p class="lead">"Praesent et justo vel elit mattis dignissim vel accumsan ante. Fusce vel felis auctor,
+                    euismod odio vitae, tincidunt neque. Fusce at velit nunc."</p>
+
+            </div>
+        </div>
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
+                <img src="{{ url_for('static', filename='images/4people.jpg') }}" alt="Image placeholder" class="img-fluid">
+            </div>
+            <div class="col-lg-5 pl-lg-5">
+                <div class="section-heading">
+                    <h2>Ashley <strong>Norman</strong></h2>
+
+                </div>
+                <p class="lead">"Integer id mi egestas, volutpat sem id, faucibus dolor. Sed rutrum fermentum ex, at
+                    pulvinar orci. Phasellus sollicitudin libero sed quam mattis euismod."</p>
+            </div>
+        </div>
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
+                <img src="{{ url_for('static', filename='images/sndg6.jpg') }}" alt="Image placeholder" class="img-fluid">
+            </div>
+            <div class="col-lg-5 pl-lg-5">
+                <div class="section-heading">
+                    <h2>Calvin <strong>Cordozar Broadus Jr.</strong></h2>
+
+                </div>
+                <p class="lead">"Phasellus finibus sapien mattis ultrices condimentum. Donec volutpat tempor urna, nec
+                    egestas est tincidunt et. Donec eu dictum est, a molestie odio. Phasellus vel tempor dolor."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="site-section" id="section-portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="section-heading text-center col-md-12">
+                <h2>Terps Dispensary <strong>Shop</strong></h2>
+            </div>
+        </div>
+        <div class="filters">
+            <ul>
+                <li class="active" data-filter="*">Top Sellers</li>
+                <li data-filter=".packaging">Flower</li>
+                <li data-filter=".mockup">Edibles</li>
+                <li data-filter=".typography">Vape Pens</li>
+                <li data-filter=".photography">CBD</li>
+            </ul>
+        </div>
+
+        <div class="filters-content">
+            <div class="row grid">
+                <div class="single-portfolio col-sm-4 all mockup">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+
+                            <img class="image img-fluid" src="{{ url_for('static', filename='images/Gorilla-Glue-4-GG4-Cannabis-Strain-1.jpg') }}" alt="">
+                        </div>
+
+                        <a href="{{ url_for('static', filename='images/Gorilla-Glue-4-GG4-Cannabis-Strain-1.jpg') }}" class="img-pop-up">
+                            <div class="middle">
+                                <div class="text align-self-center d-flex"><img src="{{ url_for('static', filename='images/preview.png') }}" alt=""></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-inner">
+                        <h4>Gorilla Glue (AAA)</h4>
+                        <div class="cat">$12.00 / gram</div>
+                    </div>
+                </div>
+                <div class="single-portfolio col-sm-4 all mockup">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+                            <img class="image img-fluid" src="{{ url_for('static', filename='images/Grape-God-Cannabis-Strain-1.jpg') }}" alt="">
+                        </div>
+                        <a href="{{ url_for('static', filename='images/p2.jpg') }}" class="img-pop-up">
+                            <div class="middle">
+                                <div class="text align-self-center d-flex"><img src="{{ url_for('static', filename='images/preview.png') }}" alt=""></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-inner">
+                        <h4>Grape God (AAAA)</h4>
+                        <div class="cat">$14.00 / gram</div>
+                    </div>
+                </div>
+                <div class="single-portfolio col-sm-4 all packaging">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+                            <img class="image img-fluid" src="{{ url_for('static', filename='images/OG-Kush-Weed-Strain.jpg') }}" alt="">
+                        </div>
+                        <a href="{{ url_for('static', filename='images/p3.jpg') }}" class="img-pop-up">
+                            <div class="middle">
+                                <div class="text align-self-center d-flex"><img src="{{ url_for('static', filename='images/preview.png') }}" alt=""></div>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="p-inner">
+                        <h4>OG Kush (AAAA)</h4>
+                        <div class="cat">$9.00 / gram</div>
+                    </div>
+                </div>
+                <div class="single-portfolio col-sm-4 all packaging">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+                            <img class="image img-fluid" src="{{ url_for('static', filename='images/gummie.jpg') }}" alt="">
+                        </div>
+                        <a href="{{ url_for('static', filename='images/p4.jpg') }}" class="img-pop-up">
+                            <div class="middle">
+                                <div class="text align-self-center d-flex"><img src="{{ url_for('static', filename='images/preview.png') }}" alt=""></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-inner">
+                        <h4>Wana Sour Gummies - Strawberry</h4>
+                        <div class="cat">$39.00</div>
+                    </div>
+                </div>
+                <div class="single-portfolio col-sm-4 all typography">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+                            <img class="image img-fluid" src="{{ url_for('static', filename='images/199539_Elite_HYBRID_Square.jpg') }}" alt="">
+                        </div>
+                        <a href="{{ url_for('static', filename='images/p5.jpg') }}" class="img-pop-up">
+                            <div class="middle">
+                                <div class="text align-self-center d-flex"><img src="{{ url_for('static', filename='images/preview.png') }}" alt=""></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-inner">
+                        <h4>Select Elite Vape Pen</h4>
+                        <div class="cat">$59.00</div>
+                    </div>
+                </div>
+                <div class="single-portfolio col-sm-4 all photography">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+                            <img class="image img-fluid" src="{{ url_for('static', filename='images/choc.jpg') }}" alt="">
+                        </div>
+                        <a href="{{ url_for('static', filename='images/p6.jpg') }}" class="img-pop-up">
+                            <div class="middle">
+                                <div class="text align-self-center d-flex"><img src="{{ url_for('static', filename='images/preview.jpg') }}" alt=""></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-inner">
+                        <h4>Goda Maple and Pecan Chocolate</h4>
+                        <div class="cat">$10.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- .section -->
+    <div class="elemental-container">
+        <button type="button" class="btn btn-danger btn-standard" style="margin-top: 40px">Show All Products</button>
+    </div>
+
+
+<section class="site-section" id="section-blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mb-5">
+                <div class="section-heading text-center">
+                    <h2>Terps Dispensary <strong>Blog</strong></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="blog-entry">
+                    <a href="#"><img src="{{ url_for('static', filename='images/adam_canals.jpg') }}" alt="Image placeholder" class="img-fluid"></a>
+                    <div class="blog-entry-text">
+                        <h3><a href="#">Terps Dispensary goes Amsterdam!</a></h3>
+                        <p class="mb-4">The coffeeshops in Amsterdam are tourist attractions of their own. Not to be confused with the American version that serves up hot java and baked goods, coffeeshops act as legal dispensaries for marijuana in this European country. </p>
+
+                        <div class="meta">
+                            <a href="#"><span class="icon-calendar"></span> Aug 9, 2020</a>
+                            <a href="#"><span class="icon-bubble"></span> 5 Comments</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="blog-entry">
+                    <a href="#"><img src="{{ url_for('static', filename='images/marijuana-farm-tour-buds-and-nugs-colorado.jpg') }}" alt="Image placeholder" class="img-fluid"></a>
+                    <div class="blog-entry-text">
+                        <h3><a href="#">Terps Dispensary completes it's 2020 Purple Haze harvest!</a></h3>
+                        <p class="mb-4">We've just completed harvesting our outdoor Purple Haze fields! Let us take you on a
+                            journey into the of bossom of one the most legendary cultivars in the world. Here's our perspective: you will not be disappointed with what we have to share!
+                        </p>
+
+                        <div class="meta">
+                            <a href="#"><span class="icon-calendar"></span> Aug 7, 2020</a>
+                            <a href="#"><span class="icon-bubble"></span> 5 Comments</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="blog-entry">
+                    <a href="#"><img src="{{ url_for('static', filename='images/indoor_farming.jpg') }}" alt="Image placeholder" class="img-fluid"></a>
+                    <div class="blog-entry-text">
+                        <h3><a href="#">How do we grow our indoor flower?</a></h3>
+                        <p class="mb-4">At Terps Dispensary it is of the highest importance that our dear customers
+                            get the transparency they deserve in how our flower is produced. In this post Sarah tells us
+                            more about how we grow cannabis indoors and the methods that are applied.
+                        </p>
+
+                        <div class="meta">
+                            <a href="#"><span class="icon-calendar"></span> May 23, 2020</a>
+                            <a href="#"><span class="icon-bubble"></span> 25 Comments</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="site-section bg-light" id="section-contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mb-5">
+                <div class="section-heading text-center">
+                    <h2>Find your nearest <strong>Location</strong></h2>
+                </div>
+            </div>
+
+            <div class="col-md-7 mb-5 mb-md-0">
+                <a href="#"><img src="{{ url_for('static', filename='images/map_placeholder.png') }}" alt="Image placeholder" class="img-fluid"></a>
+            </div>
+            <div class="col-md-5 pl-md-5">
+                <ul class="site-contact-details">
+                    <li>
+                        <span class="text-uppercase">Email</span>
+                        info.terps@gmail.com
+                    </li>
+                    <li>
+                        <span class="text-uppercase">Pueblo location</span>
+                        Pueblo, CO <br>
+                        4th Floor8 Lower <br>
+                        San Francisco street, M1 50F
+                        +30 976 1382 9922
+                    </li>
+                    <li>
+                        <span class="text-uppercase">Colorado Springs location</span>
+                        Colorado Springs, CO <br>
+                        4th Floor8 Lower <br>
+                        San Francisco street, M1 50F
+                        +30 976 1382 9922
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-md-12 text-center">
+                <p>
+                    <a href="#" class="social-item"><span class="icon-facebook2"></span></a>
+                    <a href="#" class="social-item"><span class="icon-twitter"></span></a>
+                    <a href="#" class="social-item"><span class="icon-instagram2"></span></a>
+                    <a href="#" class="social-item"><span class="icon-linkedin2"></span></a>
+                    <a href="#" class="social-item"><span class="icon-vimeo"></span></a>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <p class="col-12 text-center">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script>
+                All rights reserved - Terps Dispensary Limited
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="{{ url_for('static', filename='js/vendor/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/vendor/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/vendor/jquery.easing.1.3.js') }}"></script>
+<script src="{{ url_for('static', filename='js/vendor/jquery.stellar.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/vendor/jquery.waypoints.min.js') }}"></script>
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="{{ url_for('static', filename='js/google-map.js') }}"></script>
+
+</body>
+</html>

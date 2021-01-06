@@ -1,0 +1,12 @@
+version: "3"
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/usr/src/app
+    container_name: vaerens_webportal
+    environment:
+      GUNICORN_CMD_ARGS: "--reload"
+      FLASK_DEBUG: "True"

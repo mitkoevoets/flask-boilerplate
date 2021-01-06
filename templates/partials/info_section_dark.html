@@ -1,0 +1,16 @@
+{% macro info_section_dark(header, subheader, body, id, bg_image = '') %}
+    <section id="{{ id or 'info' }}" class="{{ bg_image }} video-promo section-padding text-center">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h5>{{ subheader }}</h5>
+                    <h2 style="color: #fff;">{{ header }}</h2>
+                    <p>
+                        {{ body }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endmacro %}

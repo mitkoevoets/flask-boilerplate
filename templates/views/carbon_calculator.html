@@ -1,0 +1,236 @@
+{% extends "base_climate_farmers.html" %}
+{% from "components/preloader.html" import preloader with context %}
+{% from "components/go_to_top_button.html" import go_to_top_button with context %}
+{% from "partials/carbon_calculator/field_form.html" import field_form with context %}
+
+{% block body %}
+    <body>
+    <div class="wrapper">
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-header-title">
+                            <h2 class="heading-title text-center">Carbon calculator</h2>
+                        </div>
+                    </div>
+                </div>
+                <div id="calculator-form">
+                    <div class="sub-title">
+                        <span>Fill in the details of the farm lands here.</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <form class="contact-form" name="carbon-calculator-form" id="carbon-calculator-form"
+                                  data-toggle="validator">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>
+                                            Farm name
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <i class="contact-icon"></i>
+                                            <input type="text"
+                                                   class="form-control"
+                                                   id="farm-name"
+                                                   name="farm-name"
+                                                   placeholder="Farm name"
+                                                   required
+                                                   data-error="Please enter your email">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>
+                                            Preferred language
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <i class="contact-icon fa fa-user"></i>
+                                            <select class="custom-select" id="inputGroupSelect01"
+                                                    style="height: 50px; margin-bottom: 30px;">
+                                                <option selected>Choose...</option>
+                                                <option value="1">English</option>
+                                                <option value="2">German</option>
+                                                <option value="3">Dutch</option>
+                                            </select>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div style="margin-bottom: 20px">
+                                            <div id="round-tab">
+                                                <!-- Nav tabs -->
+                                                <ul class="nav nav-tabs" role="tablist">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" data-toggle="tab" href="#tab01" role="tab">
+                                                            Field 1
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" data-toggle="tab" href="#tab02" role="tab">
+                                                            Field 2
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" data-toggle="tab" href="#tab03"
+                                                           role="tab">
+                                                            Field 3
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" data-toggle="tab" href="#tab04"
+                                                           role="tab">+</a>
+                                                    </li>
+                                                </ul>
+
+                                                <!-- Tab panes -->
+                                                <div class="tab-content">
+                                                    <div class="tab-pane" id="tab01" role="tabpanel">
+                                                        {{ field_form() }}
+                                                    </div>
+                                                    <div class="tab-pane" id="tab02" role="tabpanel">
+                                                        {{ field_form() }}
+                                                    </div>
+                                                    <div class="tab-pane active" id="tab03" role="tabpanel">
+                                                        {{ field_form() }}
+                                                    </div>
+                                                    <div class="tab-pane" id="tab04" role="tabpanel">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <button
+                                                    type="submit"
+                                                    id="submit-form"
+                                                    class="btn btn-common btn-form-submit float-right"
+                                            >
+                                                Run calculator
+                                            </button>
+                                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="calculator-rapport" style="display: none;">
+                    <div class="table-responsive mtb">
+                        <table class="table table-bordered table-1 ">
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th>Model 1</th>
+                                <th>Model 2</th>
+                                <th>Model 3</th>
+                                <th>Model 4</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Field 1</td>
+                                <td>33</td>
+                                <td>Row 1 Column 3</td>
+                                <td>Row 1 Column 4</td>
+                                <td>Row 1 Column 5</td>
+                            </tr>
+                            <tr>
+                                <td>Field 2</td>
+                                <td>Row 2 Column 2</td>
+                                <td>Row 2 Column 3</td>
+                                <td>Row 2 Column 4</td>
+                                <td>Row 2 Column 5</td>
+                            </tr>
+                            <tr>
+                                <td>Field 2</td>
+                                <td>Row 3 Column 2</td>
+                                <td>Row 3 Column 3</td>
+                                <td>Row 3 Column 4</td>
+                                <td>Row 3 Column 5</td>
+                            </tr>
+                            <tr>
+                                <td>Field 2</td>
+                                <td>Row 4 Column 2</td>
+                                <td>Row 4 Column 3</td>
+                                <td>Row 4 Column 4</td>
+                                <td>Row 4 Column 5</td>
+                            </tr>
+                            <tr>
+                                <td>Field 3</td>
+                                <td>Row 5 Column 2</td>
+                                <td>Row 5 Column 3</td>
+                                <td>Row 5 Column 4</td>
+                                <td>Row 5 Column 5</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center pb-60">
+                @Ivo: Write your
+                <a href="https://rebrand.ly/ud-helium" target="_blank" rel="nofollow">Disclaimer</a> here...
+            </p>
+        </div>
+    </div>
+
+    {{ go_to_top_button() }}
+
+    <div id="loader-container" class="loader-container">
+        <div class="lds-dual-ring"></div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ url_for('static', filename='js/jquery-min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/form-validator.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/contact-form-script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main-climate-farmers.js') }}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#submit-form').click(function (e) {
+                e.preventDefault();
+                $('#loader-container').show();
+                $('#calculator-form').hide();
+
+                const form = $('#carbon-calculator-form');
+                console.log(form.serialize())
+
+                $.ajax({
+                    'url': '/carbon-calculator/run',
+                    'type': 'POST',
+                    data: form.serialize(),
+                    beforeSend: function () {
+                    },
+                    error: function () {
+                        alert('Error');
+                    },
+                    success: function (html) {
+                        setTimeout(function () {
+                            $('#loader-container').hide();
+                            $('#calculator-rapport').show();
+                            if (data == "success") {
+                                alert('request sent!');
+                            }
+
+                        }, 1200);
+                    }
+                });
+            });
+        });
+    </script>
+
+    </body>
+{% endblock %}

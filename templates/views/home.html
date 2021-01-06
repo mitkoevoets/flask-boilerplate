@@ -1,0 +1,291 @@
+{% extends "base.html" %}
+{% from "partials/card.html" import card with context %}
+{% from "partials/feature.html" import feature with context %}
+{% from "partials/team.html" import team with context %}
+{% from "partials/info_section_dark.html" import info_section_dark with context %}
+{% from "partials/info_section_light.html" import info_section_light with context %}
+{% from "partials/about_us.html" import about_us with context %}
+{% from "partials/clients.html" import clients with context %}
+{% from "partials/contact.html" import contact with context %}
+{% from "partials/footer.html" import footer  with context %}
+{% from "partials/counter.html" import counter with context %}
+{% from "components/preloader.html" import preloader with context %}
+{% from "components/go_to_top_button.html" import go_to_top_button with context %}
+{% block body %}
+    <body>
+    {% include 'header.html' %}
+    <div id="hero"></div>
+{#    <div class="container-fluid">#}
+{#        <div class="row">#}
+{#            <div class="col-lg-6 col-md-6 col-sm-12 padding-none feature-bg">#}
+{#                <img class="img-fluid" src="{{ url_for('static', filename='img/aalbes.jpg') }}"#}
+{#                     style="  display:block; margin:auto;" alt="">#}
+{#            </div>#}
+{#            <div class="col-lg-6 col-md-6 col-sm-12 padding-none feature-bg">#}
+{#                <img class="img-fluid" src="{{ url_for('static', filename='img/tomaat_stam.jpg') }}"#}
+{#                     style="  display:block; margin:auto;" alt="">#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+    {{ feature(
+        title='A new generation of berry cultivators',
+        paragraph="We're a young team of farmers with the ambition to grow a unique category of high quality berryfruits in the Betuwe",
+        button_text='Find out more',
+        img_filename='img/aardbei4.jpg',
+        id='home',
+        button_url = 'contact'
+    ) }}
+    {{ feature(
+        id='berry-farming',
+        title='Current status: the first seeds',
+        paragraph="We've started building the prototype for our farm. Keep an eye on our website or social media to stay up to date with our progress
+         ",
+        button_text='Find out more',
+        img_filename='img/aardbei_leaves.jpg',
+        img_direction='left'
+    ) }}
+
+{#    <section id="services" class="section-padding bg-gray">#}
+{#        <div class="container">#}
+{#            <div class="section-header text-center">#}
+{#                <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s" id="features">What sets us apart</h2>#}
+{#                <p>We are on a mission to drive artificial intelligence and big data solutions <br> into the hands of#}
+{#                    horticulture experts across the globe</p>#}
+{#            </div>#}
+{#            <div class="row">#}
+{#                <div class="col-lg-4 col-md-6 col-xs-12">#}
+{#                    {{ card('Data farming', 'We specialise in cost-effective data farming.#}
+{#                    Developing algorithms both to facilitate and utilise plant response data aquisition. We\'re on a mission to bridge the gap between plant science and commercial cultivation through plant data farming.',#}
+{#                    '0.3s', 'lni-cloud') }}#}
+{#                </div>#}
+{#                <div class="col-lg-4 col-md-6 col-xs-12">#}
+{#                    {{ card('Unbiased choices', 'Our insights are driven by data; providing an objective component in the process of cultivation decision making. Translating what findings in plant science can mean for commercial cultivation is key in our aproach to driving innovation in the industry.',#}
+{#                    '1.2s', 'lni-flower') }}#}
+{#                </div>#}
+{#                <div class="col-lg-4 col-md-6 col-xs-12">#}
+{#                    {{ card('Plant first',#}
+{#                    'With an endless variety of crops and cultivars, each have different technical decisions making processes. We start our process from the needs and possibilities of the plant,#}
+{#                    matching the market and cultivation possiblities',#}
+{#                    '0.9s', 'lni-leaf') }}#}
+{#                </div>#}
+{#                <div class="col-lg-4 col-md-6 col-xs-12">#}
+{#                    {{ card('Inherent scalability',#}
+{#                    'Inherent scalability is at the core of our design principles. We achieve this scalability by approaching horticulture engineering, software architecture and market analysis in a modular fashion.',#}
+{#                    '0.3s', 'lni-layers') }}#}
+{#                </div>#}
+{#                <div class="col-lg-4 col-md-6 col-xs-12">#}
+{#                    {{ card('AI driven',#}
+{#                    'Vaerens utilises data science techniques including regression, genetic algorithms and machine learning for analysing data sets.#}
+{#                    Our activities in the domain commonly referred to as <b>A</b>rtificial <b>I</b>ntelligence enable us to utilise these modern techniques to support our clients and partners.',#}
+{#                    '0.6s', 'lni-keyword-research') }}#}
+{#                </div>#}
+                {#                <div class="col-lg-4 col-md-6 col-xs-12">#}
+                {#                    {{ card('Compare spectra', 'Our tooling enables us to do quick comparisons of lighting condition effects on crop development.', '0.6s', 'lni-school-compass') }}#}
+                {#                </div>#}
+                {#                <div class="col-lg-3 col-md-6 col-xs-12">#}
+                {#                    {{ card('AI first solution', 'We are an AI first technology startup. This means all our products are designed from the start to maximize artificial intelligence implementation.', '0.9s', 'lni-mashroom') }}#}
+                {#                </div>#}
+{#                <div class="col-lg-4 col-md-6 col-xs-12">#}
+{#                    {{ card('Economic viability', 'For every farmer around the world, sizeable margins are what determine the eventual long term viability of their business.#}
+{#                    So we believe that the support for each choice in a grow operation has to start at the estimated return on investment for that decision.', '1.2s', 'lni-invest-monitor') }}#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+{##}
+{#    {{ info_section_dark(#}
+{#        header='From concept to production',#}
+{#        subheader='Design, build and optimisation for your horticulture business',#}
+{#        body='Operating a vertically-integrated or stand-alone horticulture business has unique and complex challenges.#}
+{#            Our company is positioned to evaluate all the different aspects of your grow operation, provides solutions#}
+{#            to increase efficiency and quality while reducing operational challenges and pitfalls,#}
+{#            so that the focus can be directed towards growing the business.',#}
+{#        id='consultancy',#}
+{#        bg_image='bg-glasses-guy'#}
+{#    ) }}#}
+{##}
+{#    {{ feature(#}
+{#        title='Empowering plants through data',#}
+{#        paragraph='We\'re excited to hear about which crop you are growing! Some of the crops we\'ve worked with are apple, strawberry, raspberry, goose berry and leafy greens.#}
+{#        By discussing with you the setup of your operation or planned operation, we examine the details of how our skillset can#}
+{#        support the development of a succesful grow. Examples of these are planning on how to run the farm and grow design or setting#}
+{#        up trials to find the optimal grow environment using data.#}
+{#        We help you gain insights into which data you need to collect on#}
+{#        the road to running a profitable business and we can provide services on collecting, analysing and/or visualising your data.#}
+{#        Our method definitely includes a hands-on approach when it comes to supporting your grow, so <a href="#contact-us">get in touch</a>#}
+{#        to find out how our skillset matches your operation.#}
+{#        ',#}
+{#        button_text='More information',#}
+{#        img_filename='img/aardbei4.jpg',#}
+{#        img_direction='left',#}
+{#        button_url='contact-us'#}
+{#        ) }}#}
+{##}
+{#    {{ feature(#}
+{#        title='Custom design hydroponic systems',#}
+{#        paragraph='Hydroponics is a method of growing plants without soil,#}
+{#        by using nutrient solutions in a water solvent.#}
+{#        The basic premise behind hydroponics is to allow the plants roots to come in direct contact with the nutrient solution,#}
+{#        while also having access to oxygen, which is essential for proper growth.#}
+{#        Your plants will grow bigger and faster because they will not have to work as hard to obtain nutrients.#}
+{#        Even a small root system will provide the plant exactly what it needs,#}
+{#        so the plant will focus more on growing upstairs instead of expanding the root system downstairs.#}
+{#        All of this is possible through careful control of your nutrient solution and pH levels.#}
+{#        A hydroponic system will also use less water than soil based plants because the system is enclosed, which results in less evaporation.#}
+{#        ',#}
+{#        button_text='Contact us',#}
+{#        img_filename='img/basilicum.jpg',#}
+{#        img_direction='right',#}
+{#        button_url='contact-us'#}
+{#        ) }}#}
+{#    {{ info_section_light(#}
+{#        header='Controlled Environment Agriculture',#}
+{#        subheader='From market analysis to analysing plants on a micro level',#}
+{#        body='Learn more about end-to-end grow method design: the approach where ',#}
+{#        id='cea-design'#}
+{#    ) }}#}
+{#    <div class="container-fluid">#}
+{#        <div class="row">#}
+{#            <div class="col-lg-6 col-md-6 col-sm-12 padding-none feature-bg">#}
+{#                <img class="img-fluid" src="{{ url_for('static', filename='img/red_blue_clovers_11.jpg') }}"#}
+{#                     style="  display:block; margin:auto;" alt="">#}
+{#            </div>#}
+{#            <div class="col-lg-6 col-md-6 col-sm-12 padding-none feature-bg">#}
+{#                <img class="img-fluid" src="{{ url_for('static', filename='img/microgreens2.jpg') }}"#}
+{#                     style="  display:block; margin:auto;" alt="">#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    {{ feature(#}
+{#        title='Effective lighting choices are essential to successful indoor crop cultivation',#}
+{#        paragraph='Whether you\'re growing in a warehouse or greenhouse, unless your farm is located around the equatorial#}
+{#            latitudes, your crop is going to benefit from artificial lighting. But even in a greenhouse without#}
+{#            artificial lighting, each plant and even each cultivar has an optimal preferred amount of light.#}
+{#            So operational choices to regulate the amount of light your crop receives are essential.#}
+{#            Using spectrometers we are able to help you analyse your existing lighting conditions by doing#}
+{#            grid measurements. The collected data supports the process of creating as evenly distributed PPFD levels#}
+{#            as possible for the plant canopy in your grow. Where viable, we can subsequently set up data driven plant trials to#}
+{#            optimise lighting conditions depending on the cultivar and the environmental conditions.',#}
+{#        button_text='Measure your lighting',#}
+{#        button_url='contact-us',#}
+{#        padding='40',#}
+{#        img_filename='img/kelvin_cri_comparison_chart.jpg',#}
+{#        img_direction='left'#}
+{#        ) }}#}
+{#    {{ feature(#}
+{#        title='End-to-end grow method for a holistic approach to indoor farming',#}
+{#        paragraph='An approach which covers the entire stack of layers is essential to a succesful grow operation.#}
+{#        To understand your market is to understand how a farm can achieve positive margins with the respective crop.#}
+{#        At the same time one also needs to understand the horticultural possibilities for the crop in question and#}
+{#        how to use data and software to achieve succesful grow cycles within a farm.#}
+{#        Bringinging each end together and tying them into one is at the heart of our work.#}
+{#        This hollistic approach enables the most effective potential for data driven technologies.',#}
+{#        img_filename='img/end-to-end_diagram.png',#}
+{#        img_direction='left',#}
+{#        padding='40',#}
+{#        button_url = 'about-us'#}
+{#        ) }}#}
+{##}
+{#    {{ counter() }}#}
+{#    {{ feature('COBRA: Full focus on plant data collection',#}
+{#            'Tailored for plant data collection and analysis, we\'ve developed our in-house data collection platform, COBRA.#}
+{#            This data collection platform is completely designed for quantitative plant research, making data#}
+{#            collection as cost-effective and scalable as possible. COBRA also facilitates structuring the data in a dynamic way and interfaces#}
+{#            with our algorithms that utilise the data sets that are collected.',#}
+{#        false,#}
+{#        'img/cobra_design_philosophy.png'#}
+{#        ) }}#}
+{##}
+{#    <div class="container-fluid">#}
+{#        <div class="row">#}
+{#            <div class="col-lg-6 col-md-6 col-sm-12 padding-none feature-bg">#}
+{#                <img class="img-fluid" src="{{ url_for('static', filename='img/kruisbes.jpg') }}"#}
+{#                     style="  display:block; margin:auto;" alt="">#}
+{#            </div>#}
+{#            <div class="col-lg-6 col-md-6 col-sm-12 padding-none feature-bg">#}
+{#                <img class="img-fluid" src="{{ url_for('static', filename='img/aardbei.jpg') }}"#}
+{#                     style="  display:block; margin:auto;" alt="">#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    {{ info_section_light(#}
+{#        header='Data driven technologies for plant analysis',#}
+{#        subheader='Qauntitative research into plants require specialist tools and domain knowledge',#}
+{#        body='Traditional symbolic programming alone has its limits in its ability to handle a high degree#}
+{#            of complexity that comes with growing crops in a controlled environment.#}
+{#            Artificial intelligence techniques offers the opportunity to create new solutions for crop cultivation#}
+{#            where we use algorithms to analyse and manage the complexity of biological systems',#}
+{#        id='quantitative-research'#}
+{#    ) }}#}
+{#    {{ feature('Plant response mapping between crop traits and grow variables',#}
+{#        'What if we were to lower the photoperiod in an artificially lighted lettuce cultivar from 12 to 10 hours per day?#}
+{#         What if we were to boost the light intensity by 20%?#}
+{#         <br>Data collected from plant data farming is interpolated by our algorithms;#}
+{#         driving a full mapping of the relationships between a grow variables and a crop traits.#}
+{#         Enabling us and the growers we work with to get a thorough insights into how a variation in a given#}
+{#         environment variable will affect crop traits. This practice makes trials exponentially more effective.#}
+{#         Earlier collected data supports analysis of new trials and data is used to optimally determine variations#}
+{#         for cultivation trials.#}
+{#        ',#}
+{#        false,#}
+{#        'img/variable_mapping.png',#}
+{#        'right',#}
+{#        '40'#}
+{#        ) }}#}
+{#    {{ feature('Machine learning applications for image analysis',#}
+{#        'We use machine learning to train neural nets for plant image analysis applications.#}
+{#         This technique is used to create systems that visually recognise pests.#}
+{#         But it can also be deployed for other types of farm monitoring; for example recognising when it is time to#}
+{#         harvest or prune. In this way we digitally support plant care in a farming operation.#}
+{#         Another really important role for image analysis is automatic plant data generation on traits like#}
+{#         crop size, color and compactness. Get in touch if you\'re interested to find out more about the impact#}
+{#         image analysis driven by machine learning can have on your agriculture business or research trials.#}
+{#        ',#}
+{#        false,#}
+{#        'img/image_recognition_illustration.png',#}
+{#        'left',#}
+{#        '40'#}
+{#        ) }}#}
+{#    {{ feature('We deploy our unique genetic algorithms',#}
+{#        'Optimisation and exploration for plant grow conditions; using data to power research trajectories means that trials becomes more efficient exponentially.#}
+{#        We combine these genetic algorithms with data set analytics. This means that we can use existing data points as a source#}
+{#        to steer the direction of trials. For example, it allows us to create variations of an existing succesful grow condition and collect data on target variations.#}
+{#        But it also allows analysis of the rest of the data set and create variations that cover blind spots in our data sets.#}
+{#        This is useful for efficient examination of new areas of plant environment engineering that are currently unexplored, leading to new insights into the optimal#}
+{#        grow environment for a crop in a given set of conditions.#}
+{#        ',#}
+{#        false,#}
+{#        'img/genetic_algorithms.png',#}
+{#        'right',#}
+{#        '40'#}
+{#        ) }}#}
+{#    {{ info_section_dark(#}
+{#    'Phytotechnology and the future',#}
+{#    'More information about Vaerens for investors and clients',#}
+{#    'Phytotechnology (from Ancient Greek φυτο (phyto), meaning \'plant\', and τεχνολογία (technología); from τέχνη (téchnē), meaning \'art, skill, craft\', and -λογία (-logía), meaning \'study of-\') is an emerging field that implements solutions to scientific and engineering problems in the form of plants. ',#}
+{#    id='phytotechnolgy'#}
+{#    ) }}#}
+{#        {{ team() }}#}
+    {#    {{ clients() }}#}
+{#    {{ about_us() }}#}
+    {{ contact() }}
+    {{ footer() }}
+
+    {{ go_to_top_button() }}
+    {{ preloader() }}
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ url_for('static', filename='js/jquery-min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/wow.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scrolling-nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.slicknav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </body>
+{% endblock %}

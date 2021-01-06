@@ -1,0 +1,11 @@
+{% macro card(title, paragraph, delay, icon) %}
+    <div class="services-item wow fadeInRight" data-wow-delay="{{ delay }}">
+        <div class="icon">
+            <i class="{{ icon }}"></i>
+        </div>
+        <div class="services-content">
+            <h3><a href="#">{{ title }}</a></h3>
+            <p>{{ paragraph|safe }}</p>
+        </div>
+    </div>
+{% endmacro %}

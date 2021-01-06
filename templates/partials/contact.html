@@ -1,0 +1,59 @@
+{% macro contact() %}
+    <!-- Contact Section Start -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.4s">
+                <div class="col-md-6 col-lg-6 col-sm-12">
+                    <div class="contact-block">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                                                <textarea class="form-control" id="message"
+                                                                          placeholder="Your Message" rows="12"
+                                                                          data-error="Write your message"
+                                                                          required></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="submit-button">
+                                        <button class="btn btn-common" id="form-submit" type="submit">Send Message
+                                        </button>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <hr/>
+                <div class="col-md-6 col-lg-6 col-sm-12">
+                    <div class="contact-right-area wow fadeIn" id="contact">
+                        <div class="contact-title">
+                            <h1>Get in touch</h1>
+                            <p>
+                                Feel free to reach out if you are interested in our work and would like to know more
+                            </p>
+                        </div>
+                        <h2>Contact Us</h2>
+                        <div class="contact-right" id="contact-us">
+                            <div class="single-contact">
+                                <div class="contact-icon">
+                                    <i class="lni-map-marker"></i>
+                                </div>
+                                <p>Based: Deil, the Netherlands</p>
+                            </div>
+                            <div class="single-contact">
+                                <div class="contact-icon">
+                                    <i class="lni-envelope"></i>
+                                </div>
+                                <p><a href="#">Email: mitkoevoets@vaerens.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+{% endmacro %}

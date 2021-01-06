@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block body %}
+    <div id="content-wrapper" class="content-wrapper" style="display: none">
+        <!-- Intro -->
+        <section id="intro" class="main style1 dark fullscreen">
+            <div id="title-wrapper" class="content container 75%">
+                <header>
+                    <h2>Vaerens</h2>
+                </header>
+                <p>The next generation of farming</p>
+
+            </div>
+        </section>
+
+        <!-- One -->
+        <section id="one" class="main style2 right dark fullscreen">
+            <div class="content box style2">
+                <!--<header>-->
+                <!--<h2>What we do</h2>-->
+                <!--</header>-->
+                <p>Aspire a future where careful observation and smart solutions let farmers cultivate their crops in
+                    optimal conditions for growth and yield through sustainable methods.</p>
+            </div>
+        </section>
+
+        <!-- Two -->
+        <section id="two" class="main style2 left dark fullscreen">
+            <div class="content box style2">
+                <!--<header>-->
+                <!--<h2>Who I Am</h2>-->
+                <!--</header>-->
+                <p>We meet the challenge; tailored software fusing cloud computing and artificial intelligence with the
+                    latest research in plant biology.</p>
+            </div>
+        </section>
+
+        <!-- Work -->
+        <section id="work" class="main style3 primary">
+            <div class="content container">
+                <header>
+                    <h2>Coming soon...</h2>
+                    <p>
+                        We are currently expanding our documentation on the services we are offering.<br/>
+                        As this process evolves, more information will be added to this portal to describe these
+                        solutions in detail.<br/>
+                        Leave us a note in the form at the bottom to stay up to date!
+                    </p>
+                </header>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="main style3 secondary">
+            <div class="content container">
+                <header>
+                    <h2>Say hello.</h2>
+                    <p>Whether you are interested in our services, want to propose a collaboration or simply would like
+                        to have a
+                        cup of mate; <br/>we are looking forward to hear from you!
+                    </p>
+                </header>
+                <div class="box container 75%">
+                    @if(isset($contactFormSuccess) && $contactFormSuccess)
+                    <div style="color: #1c7430; margin-bottom: 30px;">Thank you! We will get back to you ASAP</div>
+                    @endif
+
+                    <!-- Contact Form -->
+                    <form method="post">
+                        <div class="row 50%">
+                            <div class="12u"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+                        </div>
+                        <div class="row">
+                            <div class="12u">
+                                <ul class="actions">
+                                    <li><input type="submit" value="Send Message"/></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                    <p>Or if you wish to contact us directly <a href="mailto:info@vaerens.com">info@vaerens.com</a></p>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% macro body(title, paragraph, button_text, button_url) %}
+    <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="text-wrapper">
+            <div style="padding-right: 50px">
+                <h2 class="title-hl wow fadeInLeft" data-wow-delay="0.3s" id="intro_grow_method_design">
+                    {{ title }}
+                </h2>
+                <p class="mb-4">
+                    {{ paragraph|safe }}
+                </p>
+                {% if button_text %}
+                    <a href="#{{ button_url }}" class="btn btn-common">
+                        {{ button_text }}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro img(img_filename) %}
+    <div class="col-lg-6 col-md-12 col-sm-12 padding-none feature-bg">
+        <img class="img-fluid" src="{{ url_for('static', filename=img_filename) }}" style="  display:block; margin:auto;" alt="">
+    </div>
+{% endmacro %}
+
+{% macro feature(title, paragraph, button_text, img_filename, img_direction = 'right', padding = false, button_url = '', id = false) %}
+    {#    {{ padding|pprint }}#}
+    <div id="{{ id or 'feature' }}" style="{{ ('padding:' + padding+ 'px') if padding else '' }}">
+        <div class="container-fluid">
+            <div class="row">
+                {% if img_direction == 'left' %}
+                    {{ img(img_filename) }}
+                    {{ body(title, paragraph, button_text, button_url) }}
+                {% else %}
+                    {{ body(title, paragraph, button_text, button_url) }}
+                    {{ img(img_filename) }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}

@@ -1,0 +1,33 @@
+{% macro about_us() %}
+    <!-- About us Section Start -->
+    <div class="skill-area section-padding" id="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInLeft" data-wow-delay="0.3s">
+                    <img class="img-fluid" src="{{ url_for('static', filename='img/macro_bij.jpg') }}" alt="">
+                </div>
+                <div class="col-lg-6 col-md-12 col-xs-12 info wow fadeInRight" data-wow-delay="0.3s">
+                    <div class="site-heading">
+                        <h2 class="section-title">About <span>Vaerens</span></h2><br><br>
+                        <p>
+                            Vaerens is a Phyto(plant-)technology startup company based in the Netherlands.
+                            Our mission is to have an impact on the relationship that exists between humans and the ecosystems that support human life, with plants center-stage in how we position our ambitions.
+                            Plants have played a pivotal role in the genesis of our species and we believe that they will play the same role
+                            in overcoming the threats that have evolved to our continued existence on this planet.
+                            The flexibility of the genetic material of plants, combined with extraordinary willingness of plant organisms to be cloned, bred and conditioned, mean
+                            that also in the future, plants are going to be there for us; supporting our continued survival on a healthy earth. <br>
+{#                            And supporting our species as we venture out into the solar system and beyond.#}
+                            <br>
+                            <br>
+                            The evolution of such technologies though, has been hampered by a
+                            lack of quantitative understanding of the relationship between plant genetic material and grow conditions.
+                            In 2020 <a href="https://www.linkedin.com/in/mit-koevoets-b02239122/">Mit Koevoets</a> started Vaerens with the purpose of building a company on the pillars
+                            of plant science, data science, horticulture- and software engineering.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About us Section End -->
+{% endmacro %}

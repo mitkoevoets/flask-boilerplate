@@ -1,0 +1,28 @@
+{% macro footer() %}
+    <!-- Footer Section Start -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-xs-12">
+                    <div class="footer-logo">
+                        <img src="{{ url_for('static', filename='img/logo_small_white2.png') }}" alt="test">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-12">
+                    <div class="social-icon text-center">
+                        {#                        <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>#}
+                        {#                        <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>#}
+                        <a class="instagram" href="https://www.instagram.com/vaerenslabs/"><i
+                                class="lni-instagram-filled"></i></a>
+                        <a class="linkedin" href="https://www.linkedin.com/company/vaerens"><i
+                                class="lni-linkedin-filled"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-5 col-xs-12">
+                    <p class="float-right">All rights reserved &copy; Vaerens 2020</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section End -->
+{% endmacro %}

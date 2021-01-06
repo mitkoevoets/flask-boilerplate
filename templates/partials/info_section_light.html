@@ -1,0 +1,15 @@
+{% macro info_section_light(header, subheader, body, id) %}
+    <!-- Info Section Start -->
+    <div id="{{ id or 'info' }}" class="section-padding bg-gray text-center">
+        <div class="container">
+            <div class="section-header text-center">
+                <h5>{{ subheader }}</h5>
+                <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">{{ header }}</h2>
+                <p>
+                    {{ content }}
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Info Section End -->
+{% endmacro %}
